@@ -21,15 +21,15 @@ function App() {
       <form>
         <h1>Democratic Primary</h1>
         {candidates.map((candidate_name, id) => (
-          <React.Fragment>
+          <div className="candidate" key={id}>
             <input
               type="radio"
               name="candidate"
               id={id}
               value={candidate_name}
             />
-            <label for={id}>{candidate_name}</label>
-          </React.Fragment>
+            <label htmlFor={id}>{candidate_name}</label>
+          </div>
         ))}
       </form>
     </div>
