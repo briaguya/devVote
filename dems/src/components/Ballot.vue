@@ -2,7 +2,7 @@
   <form class="ballot">
     <div v-for="option in options" class="option" v-bind:key="option">
       <input
-        type="radio"
+        type="checkbox"
         v-bind:id="option"
         v-bind:value="option"
         v-model="selected"
@@ -22,7 +22,7 @@ export default {
   },
   data: function() {
     return {
-      selected: null
+      selected: []
     };
   }
 };
