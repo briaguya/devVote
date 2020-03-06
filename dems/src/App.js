@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -16,6 +15,8 @@ function App() {
     'Michael Bennet'
   ];
 
+  let selected_candidates = [];
+
   return (
     <div className="ballot">
       <form>
@@ -23,10 +24,10 @@ function App() {
         {candidates.map((candidate_name, id) => (
           <div className="candidate" key={id}>
             <input
-              type="radio"
+              type="checkbox"
               name="candidate"
               id={id}
-              value={candidate_name}
+              value={selected_candidates}
             />
             <label htmlFor={id}>{candidate_name}</label>
           </div>
